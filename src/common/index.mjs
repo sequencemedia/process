@@ -3,32 +3,41 @@ import process from 'node:process'
 
 const log = debug('@sequencemedia/process')
 
-export function handleSigHup (signal) {
-  log('sigHup', signal)
-
+function hasClearLine () {
   const {
     stdout
   } = process
 
-  if ('clearLine' in stdout) {
-    stdout.clearLine()
-    stdout.cursorTo(0)
-  }
+  return 'clearLine' in stdout
+}
+
+function clearLine () {
+  const {
+    stdout
+  } = process
+
+  stdout.clearLine()
+  stdout.cursorTo(0)
+}
+
+export function handleSigHup (signal) {
+  /**
+   *  Clear the line before writing to `stdout`
+   */
+  if (hasClearLine()) clearLine()
+
+  log('sigHup', signal)
 
   process.exit(0)
 }
 
 export function handleSigInt (signal) {
+  /**
+   *  Clear the line before writing to `stdout`
+   */
+  if (hasClearLine()) clearLine()
+
   log('sigInt', signal)
-
-  const {
-    stdout
-  } = process
-
-  if ('clearLine' in stdout) {
-    stdout.clearLine()
-    stdout.cursorTo(0)
-  }
 
   process.exit(0)
 }
