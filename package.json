@@ -6,7 +6,6 @@
     "Node",
     "process"
   ],
-  "private": true,
   "main": "./src/index.mjs",
   "type": "module",
   "author": {
