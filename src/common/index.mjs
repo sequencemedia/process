@@ -26,7 +26,7 @@ export function handleSigHup (signal) {
    */
   if (hasClearLine()) clearLine()
 
-  log('sigHup', signal)
+  log('handleSigHup', signal)
 
   process.exit(0)
 }
@@ -37,49 +37,49 @@ export function handleSigInt (signal) {
    */
   if (hasClearLine()) clearLine()
 
-  log('sigInt', signal)
+  log('handleSigInt', signal)
 
   process.exit(0)
 }
 
 export function handleSigBreak (signal) {
-  log('sigBreak', signal)
+  log('handleSigBreak', signal)
 
   process.exit(0)
 }
 
 export function handleSigQuit (signal) {
-  log('sigQuit', signal)
+  log('handleSigQuit', signal)
 
   process.exit(0)
 }
 
 export function handleSigTerm (signal) {
-  log('sigTerm', signal)
+  log('handleSigTerm', signal)
 
   process.exit(0)
 }
 
 export function handleSigPipe (signal) {
-  log('sigPipe', signal)
+  log('handleSigPipe', signal)
 }
 
 export function handleBeforeExit (code) {
-  log('beforeExit', code)
+  log('handleBeforeExit', code)
 }
 
 export function handleExit (code) {
-  log('exit', code)
+  log('handleExit', code)
 }
 
 export function handleUncaughtException ({ message }) {
-  log('uncaughtException', message)
+  log('handleUncaughtException', message)
 
   process.exit(1)
 }
 
 export function handleUnhandledRejection (reason, promise) {
-  log('unhandledRejection', reason, promise)
+  log('handleUnhandledRejection', reason, promise)
 
   process.exit(1)
 }
