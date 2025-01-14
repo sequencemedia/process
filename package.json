@@ -24,7 +24,8 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "prepare": "husky"
   },
   "dependencies": {
     "debug": "^4.4.0"
@@ -35,7 +36,8 @@
     "@sequencemedia/eslint-config-standard": "^0.2.13",
     "core-js": "^3.40.0",
     "eslint": "^9.18.0",
-    "globals": "^15.14.0"
+    "globals": "^15.14.0",
+    "husky": "^9.1.7"
   },
   "exports": {
     ".": "./src/index.mjs",
