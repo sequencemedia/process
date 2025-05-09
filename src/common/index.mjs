@@ -21,8 +21,8 @@ function clearLine () {
 }
 
 /**
- * @param {string} signal
- * @returns {void}
+ *  @param {string} signal
+ *  @returns {void}
  */
 export function handleSigHup (signal) {
   /**
@@ -36,8 +36,8 @@ export function handleSigHup (signal) {
 }
 
 /**
- * @param {string} signal
- * @returns {void}
+ *  @param {string} signal
+ *  @returns {void}
  */
 export function handleSigInt (signal) {
   /**
@@ -51,8 +51,8 @@ export function handleSigInt (signal) {
 }
 
 /**
- * @param {string} signal
- * @returns {void}
+ *  @param {string} signal
+ *  @returns {void}
  */
 export function handleSigBreak (signal) {
   log('handleSigBreak', signal)
@@ -61,8 +61,8 @@ export function handleSigBreak (signal) {
 }
 
 /**
- * @param {string} signal
- * @returns {void}
+ *  @param {string} signal
+ *  @returns {void}
  */
 export function handleSigQuit (signal) {
   log('handleSigQuit', signal)
@@ -71,8 +71,8 @@ export function handleSigQuit (signal) {
 }
 
 /**
- * @param {string} signal
- * @returns {void}
+ *  @param {string} signal
+ *  @returns {void}
  */
 export function handleSigTerm (signal) {
   log('handleSigTerm', signal)
@@ -81,32 +81,32 @@ export function handleSigTerm (signal) {
 }
 
 /**
- * @param {string} signal
- * @returns {void}
+ *  @param {string} signal
+ *  @returns {void}
  */
 export function handleSigPipe (signal) {
   log('handleSigPipe', signal)
 }
 
 /**
- * @param {number} code
- * @returns {void}
+ *  @param {number} code
+ *  @returns {void}
  */
 export function handleBeforeExit (code) {
   log('handleBeforeExit', code)
 }
 
 /**
- * @param {number} code
- * @returns {void}
+ *  @param {number} code
+ *  @returns {void}
  */
 export function handleExit (code) {
   log('handleExit', code)
 }
 
 /**
- * @param {Error} error
- * @returns {void}
+ *  @param {Error} error
+ *  @returns {void}
  */
 export function handleUncaughtException ({ message }) {
   log('handleUncaughtException', message)
@@ -115,9 +115,9 @@ export function handleUncaughtException ({ message }) {
 }
 
 /**
- * @param {string} reason
- * @param {Promise<unknown>} promise
- * @returns {void}
+ *  @param {string} reason
+ *  @param {Promise<unknown>} promise
+ *  @returns {void}
  */
 export function handleUnhandledRejection (reason, promise) {
   log('handleUnhandledRejection', reason, promise)
