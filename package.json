@@ -1,6 +1,6 @@
 {
   "name": "@sequencemedia/process",
-  "version": "0.0.62",
+  "version": "0.0.63",
   "description": "Node process handlers",
   "keywords": [
     "Node",
